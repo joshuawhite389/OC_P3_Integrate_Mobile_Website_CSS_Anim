@@ -1,1 +1,69 @@
-/*# sourceMappingURL=main.css.map */
+.user-location {
+  background: #ebebeb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.user-location__icon {
+  padding-right: 1rem;
+}
+
+.app-desc {
+  background: whitesmoke;
+  padding: 2.5rem;
+  text-align: center;
+}
+.app-desc__title {
+  margin: 0;
+}
+.app-desc__text {
+  padding: 1.5rem 0;
+  font-weight: 200;
+  font-size: 1.2rem;
+}
+.app-desc__button {
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC 90%);
+  border-radius: 42px;
+  border-width: 0;
+  box-shadow: rgba(57, 31, 91, 0.24) 0 6px 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 18px 30px;
+  text-align: center;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header {
+  padding: 1rem 1rem;
+  text-align: center;
+  box-shadow: #b3b3b3 0px 1px 5px;
+  position: relative;
+}
+.header__logo {
+  font-size: 2.5rem;
+  color: #000;
+}
+
+.title {
+  font-family: "Shrikhand", serif;
+}
+
+.footer {
+  background: rgb(40, 40, 40);
+}
+.footer__logo {
+  color: #fff;
+  font-size: 2rem;
+}/*# sourceMappingURL=main.css.map */

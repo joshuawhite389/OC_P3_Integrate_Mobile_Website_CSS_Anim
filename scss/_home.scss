@@ -1,0 +1,47 @@
+.user-location {
+    background: darken($background-color, 8%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    
+
+    &__icon {
+        padding-right: 1rem;
+    }
+}
+
+.app-desc {
+    background: darken($background-color, 4%) ;
+    padding: 2.5rem;
+    text-align: center;
+
+    &__title {
+        margin: 0;
+    }
+
+    &__text {
+        padding: 1.5rem 0;
+        font-weight: 200;
+        font-size: 1.2rem;
+
+    }
+
+   
+   
+    &__button {
+    background-image: linear-gradient(to bottom right, $secondary-color, $primary-color 90%);
+    border-radius: 42px;
+    border-width: 0;
+    box-shadow: rgba(57, 31, 91, 0.24) 0 6px 10px;
+    color: set-text-color($primary-color);
+    cursor: pointer;
+    font-size: 18px;
+    padding: 18px 30px;
+    text-align: center;
+    text-decoration: none;
+    }
+
+    
+
+}
