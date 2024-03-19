@@ -4,6 +4,7 @@ $secondary-color : #FF79DA;
 $tertiary-color : #99E2D0;
 $background-color: #fff;
 $footer-color: rgb(40,40,40);
+$contrast-color: darken($background-color, 4%);
 
 //set text color based on background color you provide the function
 @function set-text-color($color) {
@@ -12,4 +13,8 @@ $footer-color: rgb(40,40,40);
     } @else {
       @return #fff;
     }
+  }
+
+  @mixin standard-box-shadow {
+    box-shadow: rgba(57, 31, 91, 0.24) 0 6px 10px;
   }

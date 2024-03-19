@@ -35,6 +35,99 @@
   text-decoration: none;
 }
 
+.how-it-works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+.how-it-works__title {
+  margin-right: auto;
+  padding-left: 2rem;
+}
+.how-it-works__cards {
+  display: flex;
+  background: whitesmoke;
+  align-items: center;
+  justify-content: center;
+  width: 23rem;
+  margin-bottom: 25px;
+  padding: 1rem 0 1rem 0;
+  border-radius: 25px;
+  box-shadow: rgba(57, 31, 91, 0.24) 0 6px 10px;
+}
+.how-it-works__step-number {
+  background: #9356DC;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 65px;
+  color: #fff;
+  padding: 4px;
+}
+.how-it-works__icon {
+  position: relative;
+  right: 40px;
+  font-size: 1.3rem;
+  color: rgb(111, 111, 111);
+}
+.how-it-works__text {
+  width: 14rem;
+  font-size: 1.1rem;
+  position: relative;
+  right: 15px;
+}
+
+.colored {
+  background: #f2eafb;
+}
+
+.colored i {
+  color: #9356DC;
+}
+
+.restaurants {
+  background: whitesmoke;
+  text-align: center;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.restaurants__title {
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.restaurant-card {
+  box-shadow: rgba(57, 31, 91, 0.24) 0 6px 10px;
+  width: 23rem;
+  height: 15rem;
+  margin-bottom: 40px;
+  border-radius: 20px;
+}
+.restaurant-card__image {
+  width: 100%;
+  height: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+.restaurant-card__content {
+  display: flex;
+  justify-content: space-between;
+}
+.restaurant-card__name {
+  margin: 0;
+}
+.restaurant-card__city {
+  margin: 0;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: #000;
