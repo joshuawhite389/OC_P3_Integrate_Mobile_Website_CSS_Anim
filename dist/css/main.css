@@ -99,14 +99,14 @@
   align-items: center;
 }
 .restaurants__title {
-  text-align: left;
+  margin-right: auto;
   padding-left: 2rem;
 }
 
 .restaurant-card {
   box-shadow: rgba(57, 31, 91, 0.24) 0 6px 10px;
   width: 23rem;
-  height: 15rem;
+  height: 18rem;
   margin-bottom: 40px;
   border-radius: 20px;
 }
@@ -117,15 +117,35 @@
      object-fit: cover;
   border-radius: 20px;
 }
+.restaurant-card__image--new-overlay, .restaurant-card__image--new-overlay-none {
+  background: #99E2D0;
+  color: #2a947a;
+  position: relative;
+  bottom: 185px;
+  left: 120px;
+  padding: 0.5rem 2rem;
+  font-size: 14px;
+}
+.restaurant-card__image--new-overlay-none {
+  opacity: 0;
+}
 .restaurant-card__content {
   display: flex;
   justify-content: space-between;
 }
+.restaurant-card__favorite-icon {
+  padding-right: 1.5rem;
+  font-size: 30px;
+}
 .restaurant-card__name {
   margin: 0;
+  padding-left: 1rem;
 }
 .restaurant-card__city {
   margin: 0;
+  text-align: start;
+  padding-left: 1rem;
+  font-weight: 300;
 }
 
 body {
@@ -155,8 +175,24 @@ a {
 
 .footer {
   background: rgb(40, 40, 40);
+  padding: 1.5rem 1.5rem;
 }
 .footer__logo {
   color: #fff;
-  font-size: 2rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.footer .links {
+  display: flex;
+  flex-direction: column;
+}
+.footer .links__link {
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
+}
+.footer .links .suggestion__icon {
+  margin-right: 0.6rem;
+}
+.footer .links .partner__icon {
+  margin-right: 0.3rem;
 }/*# sourceMappingURL=main.css.map */

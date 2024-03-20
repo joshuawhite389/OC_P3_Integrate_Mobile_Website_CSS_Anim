@@ -116,7 +116,7 @@
     align-items: center;
 
     &__title {
-        text-align: left;
+        margin-right: auto;
         padding-left: 2rem;
     }
 }
@@ -124,7 +124,7 @@
 .restaurant-card {
     @include standard-box-shadow;
     width: 23rem;
-    height: 15rem;
+    height: 18rem;
     margin-bottom: 40px;
     border-radius: 20px;
 
@@ -133,6 +133,21 @@
         height: 70%;
         object-fit: cover;
         border-radius: 20px;
+
+        &--new-overlay {
+            background: $tertiary-color;
+            color: darken($tertiary-color, 37%);
+            position: relative;
+            bottom: 185px;
+            left: 120px;
+            padding: 0.5rem 2rem;
+            font-size: 14px;
+
+            &-none {
+                @extend .restaurant-card__image--new-overlay;
+                opacity: 0;
+            }
+        }
     }
 
     &__content {
@@ -140,11 +155,21 @@
         justify-content: space-between;
     }
 
+    &__favorite-icon {
+        padding-right: 1.5rem;
+        font-size: 30px;
+    }
+
     &__name {
         margin: 0;
+        padding-left: 1rem;
     }
 
     &__city {
         margin: 0;
+        text-align: start;
+        padding-left: 1rem;
+        font-weight: 300;
     }
 }
+

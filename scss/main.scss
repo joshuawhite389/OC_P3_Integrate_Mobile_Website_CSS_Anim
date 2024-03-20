@@ -34,9 +34,29 @@ a {
 
 .footer {
     background: $footer-color;
+    padding: 1.5rem 1.5rem;
 
     &__logo {
         color: set-text-color($footer-color);
-        font-size: 2rem;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+
+        &__link {
+            margin-bottom: 0.6rem;
+            font-size: 0.9rem;
+        }
+
+        .suggestion__icon {
+            margin-right: 0.6rem;
+        }
+
+        .partner__icon {
+            margin-right: 0.3rem;
+        }
     }
 }
