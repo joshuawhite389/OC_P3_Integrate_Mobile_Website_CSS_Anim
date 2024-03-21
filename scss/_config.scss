@@ -18,3 +18,11 @@ $contrast-color: darken($background-color, 4%);
   @mixin standard-box-shadow {
     box-shadow: rgba(57, 31, 91, 0.24) 0 6px 10px;
   }
+
+  @mixin background-linear-gradient ($direction: to bottom right){
+    background: linear-gradient($direction, $secondary-color, $primary-color 90%);
+  }
+
+  @mixin color-linear-gradient ($direction: to bottom right){
+    color: linear-gradient($direction, $secondary-color, $primary-color 90%);
+  }

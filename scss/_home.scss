@@ -30,7 +30,7 @@
    
    
     &__button {
-    background-image: linear-gradient(to bottom right, $secondary-color, $primary-color 90%);
+    @include background-linear-gradient(to bottom right);
     border-radius: 42px;
     border-width: 0;
     @include standard-box-shadow;
@@ -127,12 +127,13 @@
     height: 18rem;
     margin-bottom: 40px;
     border-radius: 20px;
+    background: $background-color;
 
     &__image {
         width: 100%;
         height: 70%;
         object-fit: cover;
-        border-radius: 20px;
+        border-radius: 20px 20px 0 0;
 
         &--new-overlay {
             background: $tertiary-color;
@@ -154,10 +155,38 @@
         display: flex;
         justify-content: space-between;
     }
-
+    
+    
     &__favorite-icon {
-        padding-right: 1.5rem;
-        font-size: 30px;
+        cursor: pointer;
+        width: 3rem;
+        right: 15px;
+        border-radius: 1rem;
+        background-color: $background-color;
+        position: relative;
+        z-index: 1;
+        border-width: 1px;
+        &:hover {
+            border-color: rgba(255, 255, 255, 0);
+            &::after {
+                opacity: 1;
+            }
+        }
+    
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            @include background-linear-gradient(to top right);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 250ms;
+            border-radius: 1rem;
+            
+        }
     }
 
     &__name {
@@ -173,3 +202,8 @@
     }
 }
 
+
+
+
+    
+  
