@@ -62,11 +62,12 @@
         background: $contrast-color;
         align-items: center;
         justify-content: center;
-        width: 23rem;
+        width: 20rem;
         margin-bottom: 25px;
-        padding: 1rem 0 1rem 0;
+        padding: 0.7rem;
         border-radius: 25px;
         @include standard-box-shadow;
+        // max-width: 90%;
     }
 
     &__step-number {
@@ -78,14 +79,14 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        right: 65px;
+        right: 45px;
         color: set-text-color($primary-color);
         padding: 4px;
     }
 
     &__icon {
         position: relative;
-        right: 40px;
+        right: 32px;
         font-size: 1.3rem;
         color: rgb(111, 111, 111);
     }
@@ -123,11 +124,12 @@
 
 .restaurant-card {
     @include standard-box-shadow;
-    width: 23rem;
-    height: 18rem;
+    width: 22rem;
+    height: 17rem;
     margin-bottom: 40px;
     border-radius: 20px;
     background: $background-color;
+    
 
     &__image {
         width: 100%;
@@ -139,8 +141,8 @@
             background: $tertiary-color;
             color: darken($tertiary-color, 37%);
             position: relative;
-            bottom: 185px;
-            left: 120px;
+            bottom: 177px;
+            left: 114px;
             padding: 0.5rem 2rem;
             font-size: 14px;
 
@@ -211,6 +213,9 @@
    height: 40px;
 
    right: 15px;
+   &:hover > .heart-stroke {
+    fill: none;
+   }
 }
 
 .heart-clip {
@@ -250,6 +255,12 @@
    top: 0;
    left: 0;
    fill: black;
+
+//    fill: none; /* Change fill to none if you want to remove the fill */
+   stroke: rgb(255, 255, 255); /* Specify the color of the border */
+   stroke-width: 0.1px; /* Adjust the border width as needed */
+
+   
 }
 
 
