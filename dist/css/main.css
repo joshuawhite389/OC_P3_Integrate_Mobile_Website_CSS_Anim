@@ -26,7 +26,7 @@
   background: linear-gradient(to bottom right, #FF79DA, #9356DC 90%);
   border-radius: 42px;
   border-width: 0;
-  box-shadow: rgba(57, 31, 91, 0.24) 0 6px 10px;
+  box-shadow: rgba(110, 110, 110, 0.24) 0 6px 10px;
   color: #fff;
   cursor: pointer;
   font-size: 18px;
@@ -38,7 +38,7 @@
 }
 .app-desc__button-link--button:hover::before {
   opacity: 0.4;
-  box-shadow: rgba(57, 31, 91, 0.24) 0 10px 6px 10px;
+  box-shadow: rgba(110, 110, 110, 0.24) 0 10px 6px 10px;
 }
 .app-desc__button-link--button::before {
   content: "";
@@ -73,7 +73,7 @@
   margin-bottom: 25px;
   padding: 0.7rem;
   border-radius: 25px;
-  box-shadow: rgba(57, 31, 91, 0.24) 0 6px 10px;
+  box-shadow: rgba(110, 110, 110, 0.24) 0 6px 10px;
 }
 .how-it-works__step-number {
   background: #9356DC;
@@ -123,7 +123,7 @@
 }
 
 .restaurant-card {
-  box-shadow: rgba(57, 31, 91, 0.24) 0 6px 10px;
+  box-shadow: rgba(110, 110, 110, 0.24) 0 6px 10px;
   width: 22rem;
   height: 17rem;
   margin-bottom: 40px;
@@ -212,7 +212,7 @@
 .header__back-button {
   position: relative;
   right: 155px;
-  top: 36px;
+  top: 31px;
   font-size: 1.5rem;
 }
 
@@ -225,11 +225,10 @@
   position: relative;
   bottom: 40px;
   margin-bottom: -3rem;
-  padding-bottom: 1rem;
+  padding: 1rem;
   border-radius: 37px 37px 0 0;
 }
 .menu-section__header {
-  padding-top: 1rem;
   display: flex;
   justify-content: space-between;
 }
@@ -241,11 +240,13 @@
 }
 .menu-section__course {
   padding: 0;
+  margin-bottom: 2.5rem;
 }
 .menu-section__course-title {
   font-weight: 300;
   font-size: 1.1rem;
   position: relative;
+  padding-bottom: 0.5rem;
 }
 .menu-section__course-title::after {
   content: "";
@@ -258,13 +259,16 @@
 }
 .menu-section__card {
   background: #fff;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   margin-bottom: 1rem;
+  border-radius: 11px;
+  box-shadow: rgba(110, 110, 110, 0.24) 0 6px 10px;
 }
 .menu-section__card--dish {
   margin: 0;
   font-size: 1.2rem;
   font-weight: 500;
+  padding-bottom: 0.3rem;
 }
 .menu-section__card-desc-price {
   display: flex;
@@ -272,7 +276,7 @@
   align-items: center;
 }
 .menu-section__card-desc-price--desc {
-  font-weight: 300;
+  font-weight: 200;
   margin: 0;
 }
 .menu-section__card-desc-price--price {
@@ -282,13 +286,14 @@
 
 .button {
   text-align: center;
+  margin: 3.5rem 0;
 }
 
 .button-link--button {
   background: linear-gradient(to bottom right, #FF79DA, #9356DC 90%);
   border-radius: 42px;
   border-width: 0;
-  box-shadow: rgba(57, 31, 91, 0.24) 0 6px 10px;
+  box-shadow: rgba(110, 110, 110, 0.24) 0 6px 10px;
   color: #fff;
   cursor: pointer;
   font-size: 18px;
@@ -300,7 +305,7 @@
 }
 .button-link--button:hover::before {
   opacity: 0.4;
-  box-shadow: rgba(57, 31, 91, 0.24) 0 10px 6px 10px;
+  box-shadow: rgba(110, 110, 110, 0.24) 0 10px 6px 10px;
 }
 .button-link--button::before {
   content: "";
@@ -347,6 +352,8 @@ a:visited {
 
 .title {
   font-family: "Shrikhand", serif;
+  font-size: 1.8rem;
+  font-weight: 500;
 }
 
 li {

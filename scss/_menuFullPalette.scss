@@ -5,7 +5,7 @@
     &__back-button {
         position: relative;
         right: 155px;
-        top: 36px;
+        top: 31px;
         font-size: 1.5rem;
     }
 
@@ -22,11 +22,10 @@
     position: relative;
     bottom: 40px;
     margin-bottom: -3rem;
-    padding-bottom: 1rem;
+    padding: 1rem;
     border-radius: 37px 37px 0 0;
 
     &__header {
-        padding-top: 1rem;
         display: flex;
         justify-content: space-between;
 
@@ -41,11 +40,13 @@
 
     &__course {
         padding: 0;
+        margin-bottom: 2.5rem;
 
         &-title {
             font-weight: 300;
             font-size: 1.1rem;
             position: relative;
+            padding-bottom: 0.5rem;
 
             &::after {
                 content: '';
@@ -61,13 +62,16 @@
 
     &__card {
         background: $background-color;
-        padding: 0.5rem 1rem;
+        padding: 1rem 1rem;
         margin-bottom: 1rem;
+        border-radius: 11px;
+        @include standard-box-shadow;
 
         &--dish {
             margin: 0;
             font-size: 1.2rem;
             font-weight: 500;
+            padding-bottom: 0.3rem;
         }
 
         &-desc-price {
@@ -76,7 +80,7 @@
             align-items: center;
 
             &--desc {
-                font-weight: 300;
+                font-weight: 200;
                 margin:0;
             }
 
@@ -92,7 +96,8 @@
 }
 
 .button {
-    text-align: center
+    text-align: center;
+    margin: 3.5rem 0;
 }
 .button-link {
     @include button-link($padding: 16px 77px);
