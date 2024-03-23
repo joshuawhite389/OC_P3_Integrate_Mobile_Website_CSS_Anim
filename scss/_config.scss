@@ -15,8 +15,8 @@ $contrast-color: darken($background-color, 4%);
     }
   }
 
-  @mixin standard-box-shadow {
-    box-shadow: rgba(57, 31, 91, 0.24) 0 6px 10px;
+  @mixin standard-box-shadow ($size:6px, $blur:10px) {
+    box-shadow: rgba(57, 31, 91, 0.24) 0 $size $blur;
   }
 
   @mixin background-linear-gradient ($direction: to bottom right){
@@ -25,4 +25,43 @@ $contrast-color: darken($background-color, 4%);
 
   @mixin color-linear-gradient ($direction: to bottom right){
     color: linear-gradient($direction, $secondary-color, $primary-color 90%);
+  }
+
+  @mixin button-link($padding: 18px 30px) {
+    &--button {
+        @include background-linear-gradient(to bottom right);
+        border-radius: 42px;
+        border-width: 0;
+        @include standard-box-shadow;
+        color: set-text-color($primary-color);
+        cursor: pointer;
+        font-size: 18px;
+        padding: $padding;
+        text-align: center;
+        text-decoration: none;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+            
+            &::before {
+                opacity: 0.4;
+                @include standard-box-shadow(10px 6px);
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: darken($primary-color, 1);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 250ms;
+            border-radius: 42px;
+        }
+    }
   }

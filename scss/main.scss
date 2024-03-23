@@ -1,5 +1,6 @@
-@import 'config.scss';
-@import 'home.scss';
+@import 'config';
+@import 'home';
+@import 'menuFullPalette';
 
 
 body {
@@ -11,16 +12,26 @@ body {
 
 a {
     text-decoration: none;
-    color: set-text-color($footer-color);
+    &:visited {
+        color: black;
+    }
+    
 }
 
 
 .header {
-    padding: 1rem 1rem;
+    padding: 0rem 1rem 1.4rem 1rem;
+    text-align: center;
+    box-shadow: darken($background-color, 30%) 0px 1px 5px;
+    position: relative;
+
+    &__home {
+        padding: 1.5rem 1rem;
     text-align: center;
     box-shadow: darken($background-color, 30%) 0px 1px 5px;
     
     position: relative;
+    }
 
     &__logo {
         font-size: 2.5rem;
@@ -30,6 +41,10 @@ a {
 
 .title {
     font-family: "Shrikhand", serif;
+}
+
+li {
+    list-style: none;
 }
 
 .footer {
@@ -49,6 +64,7 @@ a {
         &__link {
             margin-bottom: 0.6rem;
             font-size: 0.9rem;
+            color: set-text-color($footer-color);
         }
 
         .suggestion__icon {

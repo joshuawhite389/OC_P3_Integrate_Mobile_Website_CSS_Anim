@@ -1,0 +1,100 @@
+
+
+.header {
+
+    &__back-button {
+        position: relative;
+        right: 155px;
+        top: 36px;
+        font-size: 1.5rem;
+    }
+
+}
+
+.background-image {
+    &__image {
+        width: 100%;
+    }
+}
+
+.menu-section {
+    background: darken($background-color, 5%);
+    position: relative;
+    bottom: 40px;
+    margin-bottom: -3rem;
+    padding-bottom: 1rem;
+    border-radius: 37px 37px 0 0;
+
+    &__header {
+        padding-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+
+        &--restaurant-name {
+            padding-left: 1rem;
+        }
+
+        &--favorite-icon {
+            padding-right: 1rem;
+        }
+    }
+
+    &__course {
+        padding: 0;
+
+        &-title {
+            font-weight: 300;
+            font-size: 1.1rem;
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 3rem;
+                border-bottom: solid 3px $tertiary-color;
+                position: absolute;
+                left: 0;
+                top: 25px;
+                z-index: 1;
+            }
+        }
+    }
+
+    &__card {
+        background: $background-color;
+        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
+
+        &--dish {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        &-desc-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &--desc {
+                font-weight: 300;
+                margin:0;
+            }
+
+            &--price {
+                margin:0;
+                font-weight: 500;
+            }
+
+
+        }
+    }
+
+}
+
+.button {
+    text-align: center
+}
+.button-link {
+    @include button-link($padding: 16px 77px);
+    
+}
