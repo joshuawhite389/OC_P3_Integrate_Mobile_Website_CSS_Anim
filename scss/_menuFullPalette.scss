@@ -66,6 +66,7 @@
         margin-bottom: 1rem;
         border-radius: 11px;
         @include standard-box-shadow;
+        @include card-fade-in-anim;
 
         &--dish {
             margin: 0;

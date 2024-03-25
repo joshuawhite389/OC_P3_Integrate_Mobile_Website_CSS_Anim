@@ -6,6 +6,12 @@ $background-color: #fff;
 $footer-color: rgb(40,40,40);
 $contrast-color: darken($background-color, 4%);
 
+//menu card animation variables
+$num-cards: 9;
+$anim-dur: 800ms;
+$anim-delay: $anim-dur / $num-cards;
+
+
 //set text color based on background color you provide the function
 @function set-text-color($color) {
     @if (lightness($color) > 60%) {
@@ -14,6 +20,7 @@ $contrast-color: darken($background-color, 4%);
       @return #fff;
     }
   }
+
 
   @mixin standard-box-shadow ($size:6px, $blur:10px) {
     box-shadow: rgba(110, 110, 110, 0.24) 0 $size $blur;
@@ -65,3 +72,51 @@ $contrast-color: darken($background-color, 4%);
         }
     }
   }
+
+@mixin card-fade-in-anim {
+  animation: cards $anim-dur backwards;
+
+        @for $i from 1 through $num-cards {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+            }
+        }
+
+        @keyframes cards {
+            0% { 
+                transform: translateY(1.5rem);
+                opacity: 0;
+            }  
+            100% { 
+                transform: scaleY(1.0);
+            }
+        }
+        .menu-section__card--1 {
+            animation-delay: 100ms;
+        }
+        .menu-section__card--2 {
+            animation-delay: 200ms;
+        }
+        .menu-section__card--3 {
+            animation-delay: 300ms;
+        }
+        .menu-section__card--4 {
+            animation-delay: 400ms;
+        }
+        .menu-section__card--5 {
+            animation-delay: 500ms;
+        }
+        .menu-section__card--6 {
+            animation-delay: 600ms;
+        }
+        .menu-section__card--7 {
+            animation-delay: 700ms;
+        }
+        .menu-section__card--8 {
+            animation-delay: 800ms;
+        }
+        .menu-section__card--9 {
+            animation-delay: 900ms;
+        }
+}
+  

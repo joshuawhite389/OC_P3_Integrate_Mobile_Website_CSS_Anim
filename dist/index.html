@@ -20,6 +20,8 @@
 </head>
 
 <body>
+    
+
     <header class="header__home">
         <div class="header__logo title">ohmyfood</div>
     </header>
@@ -32,9 +34,11 @@
     <div class="app-desc">
         <h2 class="app-desc__title">Book the menu you like</h2>
         <p class="app-desc__text">Discover top-of-the-art restaurants we picked for you</p>
-        <a href="#restaurant-link" class="app-desc__button-link">
-            <button class="app-desc__button-link--button">Explore our restaurants</button>
-        </a>
+        <div class="button">
+            <a class="button-link" href="#restaurant-link">
+                <button class="button-link--button">Explore our restaurants</button>
+            </a>
+        </div>
         
     </div>
 
@@ -59,7 +63,7 @@
 
     <div class="restaurants" id="restaurant-link">
         <h2 class="restaurants__title">Restaurants</h2>
-        <a href="menu-full-palette.html">
+        <a href="menuFullPalette.html">
             <div class="restaurant-card">
                 <img src="/dist/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                     alt="Photo of a dish at The Full Palette" class="restaurant-card__image">
@@ -207,6 +211,11 @@
         </div>
     </footer>
 
+    
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+    
 </body>
 
 </html>
