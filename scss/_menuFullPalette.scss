@@ -65,8 +65,69 @@
         padding: 1rem 1rem;
         margin-bottom: 1rem;
         border-radius: 11px;
+        height: 2.8rem;
         @include standard-box-shadow;
         @include card-fade-in-anim;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        &:hover {
+            .menu-section__card--dish-added {
+                animation: favoriteAdded 1s forwards; 
+            } 
+
+            .menu-section__card--dish-added-icon {
+                animation: rotateIcon 1s forwards;
+            }
+        }
+
+        &:not(:hover) {
+            .menu-section__card--dish-added {
+                animation: reverseFavoriteAdded 0.2s linear forwards; 
+            } 
+        
+            .menu-section__card--dish-added-icon {
+                animation: reverseRotateIcon 0.2s linear forwards;
+            }
+        }
+
+        
+        &--dish-added {
+            width: 0;
+            height: 100%;
+            background: $tertiary-color;
+            margin-left: 1rem;
+            transform: translateX(1rem);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &-icon {
+                padding: 3rem 0;
+                position: relative;
+                bottom: 10px;
+                font-size: 2rem;
+                color: set-text-color($primary-color);
+            }
+        }
+
+        @keyframes favoriteAdded {
+            0% { width: 0; }
+            100% { width: 5rem;}
+            }
+
+        @keyframes rotateIcon {
+            100% { transform: rotate(360deg);}
+            }
+
+            @keyframes reverseFavoriteAdded {
+                0% { width: 5rem; }
+                100% { width: 0;}
+            }
+            
+            @keyframes reverseRotateIcon {
+                100% { transform: rotate(0deg);}
+            }
 
         &--dish {
             margin: 0;
@@ -79,16 +140,28 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 1rem;
+
+            &-check {
+                display: flex;
+            }
 
             &--desc {
                 font-weight: 200;
                 margin:0;
+                width: 17.5rem;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
             }
 
             &--price {
                 margin:0;
                 font-weight: 500;
+                align-self: center;
             }
+            
+
 
 
         }
@@ -104,3 +177,4 @@
     @include button-link($padding: 16px 77px);
     
 }
+

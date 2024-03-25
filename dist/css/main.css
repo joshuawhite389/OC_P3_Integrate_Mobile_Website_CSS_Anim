@@ -309,8 +309,11 @@
   padding: 1rem 1rem;
   margin-bottom: 1rem;
   border-radius: 11px;
+  height: 2.8rem;
   box-shadow: rgba(110, 110, 110, 0.24) 0 6px 10px;
   animation: cards 800ms backwards;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu-section__card--1 {
   animation-delay: 88.8888888889ms;
@@ -375,6 +378,61 @@
 .menu-section__card .menu-section__card--9 {
   animation-delay: 900ms;
 }
+.menu-section__card:hover .menu-section__card--dish-added {
+  animation: favoriteAdded 1s forwards;
+}
+.menu-section__card:hover .menu-section__card--dish-added-icon {
+  animation: rotateIcon 1s forwards;
+}
+.menu-section__card:not(:hover) .menu-section__card--dish-added {
+  animation: reverseFavoriteAdded 0.2s linear forwards;
+}
+.menu-section__card:not(:hover) .menu-section__card--dish-added-icon {
+  animation: reverseRotateIcon 0.2s linear forwards;
+}
+.menu-section__card--dish-added {
+  width: 0;
+  height: 100%;
+  background: #99E2D0;
+  margin-left: 1rem;
+  transform: translateX(1rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-section__card--dish-added-icon {
+  padding: 3rem 0;
+  position: relative;
+  bottom: 10px;
+  font-size: 2rem;
+  color: #fff;
+}
+@keyframes favoriteAdded {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 5rem;
+  }
+}
+@keyframes rotateIcon {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes reverseFavoriteAdded {
+  0% {
+    width: 5rem;
+  }
+  100% {
+    width: 0;
+  }
+}
+@keyframes reverseRotateIcon {
+  100% {
+    transform: rotate(0deg);
+  }
+}
 .menu-section__card--dish {
   margin: 0;
   font-size: 1.2rem;
@@ -385,14 +443,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 1rem;
+}
+.menu-section__card-desc-price-check {
+  display: flex;
 }
 .menu-section__card-desc-price--desc {
   font-weight: 200;
   margin: 0;
+  width: 17.5rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu-section__card-desc-price--price {
   margin: 0;
   font-weight: 500;
+  align-self: center;
 }
 
 .button {
