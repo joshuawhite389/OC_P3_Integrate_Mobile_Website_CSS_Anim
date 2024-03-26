@@ -11,10 +11,22 @@
     }
 }
 
+.tablet-desktop-flex-wrapper{
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 0 10rem;
+    }
+}
+
 .app-desc {
     background: $contrast-color;
     padding: 2.5rem;
     text-align: center;
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        background: $background-color;
+    }
 
     &__title {
         margin: 0;
@@ -45,6 +57,9 @@
     flex-direction: column;
     align-items: center;
     padding: 2rem 0;
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        padding-left: 5rem;
+    }
 
 
     &__title {
@@ -62,7 +77,10 @@
         padding: 0.7rem;
         border-radius: 25px;
         @include standard-box-shadow;
-        // max-width: 90%;
+        @media screen and (min-width: map-get($breakpoints, desktop)){
+            // width: 16%;
+        }
+    
     }
 
     &__step-number {
@@ -111,10 +129,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        justify-content: start;
+        padding: 0 2rem;
+    }
 
     &__title {
         margin-right: auto;
         padding-left: 2rem;
+        @media screen and (min-width: map-get($breakpoints, desktop)){
+            font-family: "Shrikhand", serif;
+            font-size: 4rem;
+            font-weight: 500;
+            padding: 0;
+        }
     }
 }
 
@@ -125,6 +157,9 @@
     margin-bottom: 40px;
     border-radius: 20px;
     background: $background-color;
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        margin-top: 2rem;
+    }
     
 
     &__image {
@@ -231,38 +266,38 @@
 
 }
 
-.loader-wrapper {
-    height: 100%;
-    width: 100%;
-    background: $background-color;
-    position: fixed;
-    top:0;
-    left: 0;
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    animation: fadeOut 0.5s 2s forwards;
-    }
+// .loader-wrapper {
+//     height: 100%;
+//     width: 100%;
+//     background: $background-color;
+//     position: fixed;
+//     top:0;
+//     left: 0;
+//     z-index: 10;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     overflow: hidden;
+//     animation: fadeOut 0.5s 2s forwards;
+//     }
 
-.loader {
-    margin: auto;
-    border: 15px solid #EAF0F6;
-    border-radius: 50%;
-    border-top: 15px solid $tertiary-color;
-    width: 200px;
-    height: 200px;
-    animation: spinner 2s linear infinite;
-    overflow: hidden;
-}
+// .loader {
+//     margin: auto;
+//     border: 15px solid #EAF0F6;
+//     border-radius: 50%;
+//     border-top: 15px solid $tertiary-color;
+//     width: 200px;
+//     height: 200px;
+//     animation: spinner 2s linear infinite;
+//     overflow: hidden;
+// }
 
-@keyframes spinner {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg);}
-    }
+// @keyframes spinner {
+//     0% { transform: rotate(0deg); }
+//     100% { transform: rotate(360deg);}
+//     }
 
-@keyframes fadeOut {
-    0% { opacity: 1;}
-    100% { opacity: 0; z-index: -1;}
-    }
+// @keyframes fadeOut {
+//     0% { opacity: 1;}
+//     100% { opacity: 0; z-index: -1;}
+//     }

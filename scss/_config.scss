@@ -11,6 +11,11 @@ $num-cards: 9;
 $anim-dur: 800ms;
 $anim-delay: $anim-dur / $num-cards;
 
+$breakpoints: (
+  tablet: 600px,
+  desktop: 1000px
+);
+
 
 //set text color based on background color you provide the function
 @function set-text-color($color) {
@@ -119,4 +124,34 @@ $anim-delay: $anim-dur / $num-cards;
             animation-delay: 900ms;
         }
 }
+
+@mixin push-in-anim {
+  animation: favoriteAdded 1s forwards; 
+}
+
+@mixin rotate-anim {
+  animation: rotateIcon 1s forwards;
+}
+
+@mixin push-out-anim {
+  animation: reverseFavoriteAdded 0.2s linear forwards; 
+}
   
+
+@keyframes favoriteAdded {
+  0% { width: 0; }
+  100% { width: 5rem;}
+  }
+
+@keyframes rotateIcon {
+  100% { transform: rotate(360deg);}
+  }
+
+@keyframes reverseFavoriteAdded {
+      0% { width: 5rem; }
+      100% { width: 0;}
+  }
+  
+@keyframes reverseRotateIcon {
+      100% { transform: rotate(0deg);}
+  }

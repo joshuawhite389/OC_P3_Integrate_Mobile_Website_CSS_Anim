@@ -73,22 +73,18 @@
 
         &:hover {
             .menu-section__card--dish-added {
-                animation: favoriteAdded 1s forwards; 
+                @include push-in-anim;
             } 
 
             .menu-section__card--dish-added-icon {
-                animation: rotateIcon 1s forwards;
+                @include rotate-anim;
             }
         }
 
         &:not(:hover) {
             .menu-section__card--dish-added {
-                animation: reverseFavoriteAdded 0.2s linear forwards; 
+                @include push-out-anim;
             } 
-        
-            .menu-section__card--dish-added-icon {
-                animation: reverseRotateIcon 0.2s linear forwards;
-            }
         }
 
         
@@ -110,24 +106,6 @@
                 color: set-text-color($primary-color);
             }
         }
-
-        @keyframes favoriteAdded {
-            0% { width: 0; }
-            100% { width: 5rem;}
-            }
-
-        @keyframes rotateIcon {
-            100% { transform: rotate(360deg);}
-            }
-
-            @keyframes reverseFavoriteAdded {
-                0% { width: 5rem; }
-                100% { width: 0;}
-            }
-            
-            @keyframes reverseRotateIcon {
-                100% { transform: rotate(0deg);}
-            }
 
         &--dish {
             margin: 0;
